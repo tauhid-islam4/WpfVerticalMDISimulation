@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfVerticalMDISimulation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MDI Application - Vertical Layout" Height="450" Width="800">
+    <DockPanel>
+        <!-- Menu for adding child windows -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New Window" Click="NewWindow_Click" />
+                <MenuItem Header="Exit" Click="Exit_Click" />
+            </MenuItem>
+        </Menu>
+
+        <!-- Vertical layout for child windows -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="ChildContainer" Orientation="Vertical" Background="LightGray" />
+        </ScrollViewer>
+    </DockPanel>
+</Window>

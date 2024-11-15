@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WpfVerticalMDISimulation.ChildWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             Height="150" Width="700">
+    <Border BorderThickness="1" BorderBrush="Black" Background="White">
+        <Grid>
+            <!-- Define Row Definitions -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <!-- Title row -->
+                <RowDefinition Height="*" />
+                <!-- Content row -->
+            </Grid.RowDefinitions>
+
+            <!-- Title Bar -->
+            <Border Background="LightBlue" Grid.Row="0">
+                <TextBlock Text="{Binding Title, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Center" 
+                           FontWeight="Bold" 
+                           FontSize="14" />
+            </Border>
+
+            <!-- Content Area -->
+            <Grid Grid.Row="1" Margin="10">
+                <TextBlock Text="This is a child window content area." FontSize="12" />
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
+    
